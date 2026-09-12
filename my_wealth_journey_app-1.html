@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Wealth Journey</title>
+<style>
+:root{--blue:#174b80;--light:#eaf5ff;--mid:#b9daf3;--gold:#c9a85d;--ink:#173e68;--white:#fff}
+*{box-sizing:border-box} body{margin:0;background:#dcecf8;font-family:Georgia,serif;color:var(--ink)}
+.app{max-width:430px;margin:auto;min-height:100vh;background:linear-gradient(#eef8ff,#fff);box-shadow:0 0 30px #9bb8cf}
+header{padding:22px 18px 16px;text-align:center;background:linear-gradient(135deg,#e8f6ff,#fff)}
+.logo{width:62px;height:62px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:38px;font-style:italic;margin:0 auto 5px}
+h1{font-size:31px;font-weight:normal;font-style:italic;margin:2px 0;color:#123f70}
+.tag{font-size:11px;letter-spacing:3px}.content{padding:15px}.greet{font-size:24px;font-style:italic;margin:5px 0}.sub{font-size:13px;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.card{background:#fff;border:1px solid #c9e1f2;border-radius:15px;padding:14px;box-shadow:0 3px 12px #cddce6}.label{font-size:11px;letter-spacing:1px;text-transform:uppercase}.amount{font-size:25px;margin:7px 0}.up{font-size:11px}
+.progress{height:8px;background:#e3eef5;border-radius:8px;overflow:hidden}.bar{height:100%;background:#317eb7;border-radius:8px}
+.section{font-size:24px;font-style:italic;margin:22px 3px 9px}.wide{margin-top:10px}.challenge{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.challenge .card{text-align:center;padding:11px 6px}.circle{width:56px;height:56px;border:6px solid #d5e7f4;border-top-color:#2875aa;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:9px auto;font-size:13px}.small{font-size:11px}.tracker{display:grid;grid-template-columns:1fr 1fr;gap:10px}.row{display:flex;justify-content:space-between;border-bottom:1px solid #e4edf3;padding:7px 0;font-size:12px}.big{font-size:27px;margin:7px 0}.milestones{display:flex;justify-content:space-between;gap:3px;align-items:center}.mile{font-size:9px;text-align:center;flex:1}.dot{width:24px;height:24px;border-radius:50%;border:2px solid #a8cce6;margin:auto auto 4px;background:white}.done{background:#317eb7;color:white;border-color:#317eb7}.quote{text-align:center;font-style:italic;margin:17px 0;color:#315d83}
+nav{position:sticky;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid #d4e6f2;display:flex;justify-content:space-around;padding:10px 4px 8px}nav button{border:0;background:none;color:#174b80;font-family:Georgia;font-size:11px}nav span{display:block;font-size:22px;margin-bottom:3px}
+input{width:100%;padding:9px;border:1px solid #bdd7ea;border-radius:9px;margin:5px 0;font-family:Georgia}.btn{background:#317eb7;color:#fff;border:0;border-radius:9px;padding:9px 12px;margin-top:5px;font-family:Georgia}
+.modal{display:none;position:fixed;inset:0;background:#0006;align-items:center;justify-content:center;padding:20px}.modalbox{max-width:390px;width:100%;background:#fff;border-radius:18px;padding:20px}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="logo">R</div><h1>My Wealth Journey</h1><div class="tag">SAVE · INVEST · BUILD YOUR DREAMS</div></header>
+<div class="content">
+<div class="greet">Good morning ♡</div><div class="sub">Small steps today · Big dreams tomorrow</div>
+
+<div class="grid">
+<div class="card"><div class="label">Total Saved</div><div class="amount" id="saved">$8,450</div><div class="up">↑ +$350 this month</div></div>
+<div class="card"><div class="label">Total Invested</div><div class="amount" id="invested">$24,780</div><div class="up">↑ +$1,120 this month</div></div>
+<div class="card"><div class="label">Net Worth</div><div class="amount" id="net">$33,230</div><div class="up">↑ growing</div></div>
+<div class="card"><div class="label">Goal Progress</div><div class="amount">33%</div><div class="small">$16,770 to go</div><div class="progress"><div class="bar" style="width:33%"></div></div></div>
+</div>
+
+<div class="grid wide">
+<div class="card"><div class="label">Savings Streak</div><div class="amount">12 days 🔥</div><div class="small">Keep it going!</div></div>
+<div class="card"><div class="label">Monthly Goal</div><div class="amount">$2,200</div><div class="small">$1,800 saved · 82%</div><div class="progress"><div class="bar" style="width:82%"></div></div></div>
+</div>
+
+<div class="section">Savings Challenges</div>
+<div class="challenge">
+<div class="card"><b>$10,000</b><div class="small">Emergency Fund</div><div class="circle">85%</div><div class="small">$8,450</div></div>
+<div class="card"><b>$100,000</b><div class="small">Savings</div><div class="circle">42%</div><div class="small">$42,300</div></div>
+<div class="card"><b>$1,000,000</b><div class="small">Investing</div><div class="circle">12%</div><div class="small">$120,500</div></div>
+</div>
+
+<div class="section">Investment Tracker</div>
+<div class="tracker">
+<div class="card">
+<div class="row"><span>Monthly</span><b>$400</b></div><div class="row"><span>Return</span><b>8%</b></div><div class="row"><span>Years</span><b>20</b></div><div class="row"><span>DRIP</span><b>ON</b></div>
+</div>
+<div class="card"><div class="label">Projected Value</div><div class="big">$179,876</div><div class="small">20-year illustration</div><div class="progress"><div class="bar" style="width:68%"></div></div></div>
+</div>
+
+<div class="section">Milestones</div>
+<div class="card milestones">
+<div class="mile"><div class="dot done">✓</div>$1K</div><div class="mile"><div class="dot done">✓</div>$5K</div><div class="mile"><div class="dot done">✓</div>$10K</div><div class="mile"><div class="dot"></div>$25K</div><div class="mile"><div class="dot"></div>$50K</div><div class="mile"><div class="dot"></div>$100K</div><div class="mile"><div class="dot"></div>$1M</div>
+</div>
+<div class="quote">Your future is worth it ♡</div>
+</div>
+<nav>
+<button onclick="show('Home')"><span>⌂</span>Home</button>
+<button onclick="show('Savings')"><span>🐷</span>Savings</button>
+<button onclick="show('Investing')"><span>↗</span>Investing</button>
+<button onclick="show('Goals')"><span>◎</span>Goals</button>
+<button onclick="show('More')"><span>☰</span>More</button>
+</nav>
+</div>
+<div class="modal" id="modal" onclick="if(event.target===this)this.style.display='none'"><div class="modalbox"><h2 id="mtitle"></h2><p id="mtext"></p><button class="btn" onclick="document.getElementById('modal').style.display='none'">Close</button></div></div>
+<script>
+function show(name){
+ document.getElementById('mtitle').textContent=name;
+ const texts={Home:'Your wealth dashboard is ready.',Savings:'Track savings challenges, deposits, streaks and your $10,000 / $100,000 goals.',Investing:'Track contributions, projected growth and DRIP investing.',Goals:'Create and monitor savings and investing milestones.',More:'Settings, calculator tools and account options can live here.'};
+ document.getElementById('mtext').textContent=texts[name];
+ document.getElementById('modal').style.display='flex';
+}
+</script>
+</body>
+</html>
